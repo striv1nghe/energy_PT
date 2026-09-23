@@ -1,0 +1,30 @@
+{
+  "name": "@energy/web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "绿城园区能源数据监控中心前端 (React + Vite + ECharts)",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -p tsconfig.json --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^6.0.0",
+    "@energy/shared": "workspace:*",
+    "@tanstack/react-query": "^5.66.0",
+    "antd": "^5.24.0",
+    "dayjs": "^1.11.23",
+    "echarts": "^5.6.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.0",
+    "typescript": "^5.7.3",
+    "vite": "^6.0.0"
+  }
+}

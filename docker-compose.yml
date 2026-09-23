@@ -1,0 +1,17 @@
+services:
+  energy:
+    build: .
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./data:/app/data
+    environment:
+      - PORT=4000
+      - BBI_DB_PATH=/app/data/energy_data.db
+      # 是否启用后台同步调度器（告警60s / 采样15min / 日冻结02:00）
+      - SYNC_DAEMON=false
+      # BBICloud 会话配置（可选，留空则使用手动 sid 或自动登录）
+      - BBI_SID=${BBI_SID:-}
+      - BBI_USERNAME=${BBI_USERNAME:-}
+      - BBI_PASSWORD=${BBI_PASSWORD:-}
+    restart: unless-stopped

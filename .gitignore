@@ -5,3 +5,19 @@
 __pycache__/*
 .ppt_build/node_modules
 *.pkl
+.bbi_session
+*.db
+*.db-*
+
+# Python 虚拟环境
+.venv/
+
+# Node
+node_modules/
+dist/
+.turbo/
+coverage/
+*.tsbuildinfo
+.vite/
+.env
+.env.local

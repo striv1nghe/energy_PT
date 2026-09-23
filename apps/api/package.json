@@ -1,0 +1,42 @@
+{
+  "name": "@energy/api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "绿城园区能源数据监控中心后端 API (NestJS)",
+  "scripts": {
+    "dev": "nest start --watch",
+    "build": "nest build",
+    "start": "node dist/main.js",
+    "start:prod": "node dist/main.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "sync:daily": "nest build && node dist/cli.js daily",
+    "sync:sample": "nest build && node dist/cli.js sample",
+    "sync:alarm": "nest build && node dist/cli.js alarm",
+    "sync:all": "nest build && node dist/cli.js all",
+    "sync:backfill": "nest build && node dist/cli.js backfill",
+    "sync:repair": "nest build && node dist/cli.js repair",
+    "sync:daemon": "nest build && SYNC_DAEMON=true node dist/main.js"
+  },
+  "dependencies": {
+    "@energy/shared": "workspace:*",
+    "@nestjs/common": "^11.1.0",
+    "@nestjs/config": "^4.0.0",
+    "@nestjs/core": "^11.1.0",
+    "@nestjs/jwt": "^12.0.2",
+    "@nestjs/platform-express": "^11.1.0",
+    "@nestjs/schedule": "^12.0.2",
+    "axios": "^1.20.0",
+    "express": "^5.2.1",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^11.0.0",
+    "@nestjs/schematics": "^11.0.0",
+    "@types/express": "^5.0.0",
+    "@types/node": "^24.0.0",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.0"
+  }
+}

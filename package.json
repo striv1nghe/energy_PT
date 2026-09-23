@@ -1,0 +1,18 @@
+{
+  "name": "energy-pt",
+  "version": "1.0.0",
+  "private": true,
+  "description": "绿城园区能源数据监控中心 (Node 全栈: NestJS + React/Vite + ECharts)",
+  "packageManager": "pnpm@12.4.2",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build:shared": "pnpm --filter @energy/shared build",
+    "dev:api": "pnpm --filter @energy/api dev",
+    "dev:web": "pnpm --filter @energy/web dev",
+    "build": "pnpm build:shared && pnpm -r --filter \"./apps/*\" build",
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm -r test"
+  }
+}
